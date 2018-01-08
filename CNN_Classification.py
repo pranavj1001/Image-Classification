@@ -36,3 +36,25 @@ classifier.add(Dense(activation="sigmoid", units=1))
 
 # Compiling the CNN
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+
+# use ImageDataGenerator to preprocess the data
+from keras.preprocessing.image import ImageDataGenerator
+
+# augment the data that we have
+train_datagen = ImageDataGenerator(rescale = 1./255,
+                                   shear_range = 0.2,
+                                   zoom_range = 0.2,
+                                   horizontal_flip = True)
+test_datagen = ImageDataGenerator(rescale = 1./255)
+
+# prepare training data
+training_data = train_datagen.flow_from_directory('dataset/training_data',
+                                                 target_size = (64, 64),
+                                                 batch_size = 32,
+                                                 class_mode = 'binary')
+
+# prepare test data
+test_data = test_datagen.flow_from_directory('dataset/test_data',
+                                            target_size = (64, 64),
+                                            batch_size = 32,
+                                            class_mode = 'binary'))
