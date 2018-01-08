@@ -28,3 +28,7 @@ In future, I'll add a separate python script for this.
 ## Queries?
 
 email me at pranavj1001@gmail.com
+
+## License
+
+MIT License
