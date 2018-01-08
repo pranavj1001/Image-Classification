@@ -4,4 +4,4 @@ Your images for testing should go here. Keep different classes of photos in diff
 
 ## Example
 
-If you're classifying images of leopards and lions. Then, keep photos of leopards in a folder and keeps photos of lions in a separate folder.
+If you're classifying images of leopards and lions. Then, keep photos of leopards and lions in separate folders.
