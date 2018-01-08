@@ -57,4 +57,11 @@ training_data = train_datagen.flow_from_directory('dataset/training_data',
 test_data = test_datagen.flow_from_directory('dataset/test_data',
                                             target_size = (64, 64),
                                             batch_size = 32,
-                                            class_mode = 'binary'))
+                                            class_mode = 'binary')
+
+# finally start computation
+classifier.fit_generator(training_data,
+                         steps_per_epoch = (8000 / 32),
+                         epochs = 25,
+                         validation_data = test_data,
+                         validation_steps = 2000)
