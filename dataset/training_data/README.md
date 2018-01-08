@@ -1,0 +1,7 @@
+## Contents of this folder
+
+Your images for training should go here. Keep different classes of photos in different folders if you're following the code given in this repo.
+
+## Example
+
+If you're classifying images of leopards and lions. Then, keep photos of leopards in a folder and keeps photos of lions in a separate folder.
