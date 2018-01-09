@@ -3,6 +3,9 @@
 Created on Mon Jan  8 14:04:25 2018
 
 @author: pranavjain
+
+This program classifies the images into classes.
+
 """
 
 # Importing the Keras libraries and packages
