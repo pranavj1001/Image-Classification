@@ -1,5 +1,5 @@
 # Image-Classification
-A short template to classify images using neural networks.
+A short template to classify images using convolutional neural networks.
 
 Hey there,
 
