@@ -14,7 +14,9 @@ Interested in keras? Find out more info about it from [here](https://keras.io/).
 * Make sure you have [python](https://www.python.org/) installed on your machine.
 * Make sure you have installed [Theano](http://deeplearning.net/software/theano/), [Tensorflow](https://www.tensorflow.org/) and [Keras](https://keras.io/) on your machine.
 
-**Note**: If you have a dedicated GPU then it is recommended to install tensorflow with gpu enabled.
+**Note**: 
+* If you have a dedicated GPU then it is recommended to install tensorflow with gpu enabled.
+* Also, please try to play with the code. Add/remove layers, change units, check the accuracy and then only use the code in production.
 
 ## Usage
 
