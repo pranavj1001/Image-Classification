@@ -75,3 +75,26 @@ test_image = image.load_img('test.png', target_size = (128, 128))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 result = classifier.predict(test_image)
+# training_data.class_indices
+if result[0][0] == 1:
+    prediction = 'aquilegia'
+elif result[0][1] == 1:
+    prediction = 'bellflower'
+elif result[0][2] == 1:
+    prediction = 'calendula'
+elif result[0][3] == 1:
+    prediction = 'goldquelle'
+elif result[0][4] == 1:
+    prediction = 'iris'
+elif result[0][5] == 1:
+    prediction = 'leucanthemum'
+elif result[0][6] == 1:
+    prediction = 'phlox'
+elif result[0][7] == 1:
+    prediction = 'rose'
+elif result[0][8] == 1:
+    prediction = 'rudbeckia_laciniata'
+elif result[0][9] == 1:
+    prediction = 'viola'
+
+print(prediction)
