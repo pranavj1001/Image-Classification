@@ -21,9 +21,11 @@ Interested in keras? Find out more info about it from [here](https://keras.io/).
 Just paste the images in appropriate folders under 'dataset' folder. Then, just run the script. That's it! 
 You just trained your artificial neural network with data and tested it out.
 
-**Note**: This program assumes that you have only two classes to classify from images. 
+**Note**: ~~This program assumes that you have only two classes to classify from images. 
 Slight changes need to be done if you have multiple classes of images. 
-In future, I'll add a separate python script for this.
+In future, I'll add a separate python script for this.~~
+
+I've added the script which can handle multiple classes. So if you have two classes then goto folder 'Two_Classes' else goto folder 'More_than_two_Classes'
 
 ## Queries?
 
