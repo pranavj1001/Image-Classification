@@ -67,3 +67,11 @@ classifier.fit_generator(training_data,
                          epochs = 25,
                          validation_data = test_data,
                          validation_steps = 2000)
+
+# to make predictions
+import numpy as np
+from keras.preprocessing import image
+test_image = image.load_img('test.png', target_size = (128, 128))
+test_image = image.img_to_array(test_image)
+test_image = np.expand_dims(test_image, axis = 0)
+result = classifier.predict(test_image)
