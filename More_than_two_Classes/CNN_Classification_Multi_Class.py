@@ -38,3 +38,32 @@ classifier.add(Dense(activation="softmax", units=10))
 
 # Compiling the CNN
 classifier.compile(optimizer = 'rmsprop', loss = 'categorical_crossentropy', metrics = ['accuracy'])
+
+# use ImageDataGenerator to preprocess the data
+from keras.preprocessing.image import ImageDataGenerator
+
+# augment the data that we have
+train_datagen = ImageDataGenerator(rescale = 1./255,
+                                   shear_range = 0.2,
+                                   zoom_range = 0.2,
+                                   horizontal_flip = True)
+test_datagen = ImageDataGenerator(rescale = 1./255)
+
+# prepare training data
+training_data = train_datagen.flow_from_directory('dataset/training_set',
+                                                 target_size = (128, 128),
+                                                 batch_size = 32,
+                                                 class_mode = 'categorical')
+
+# prepare test data
+test_data = test_datagen.flow_from_directory('dataset/test_set',
+                                            target_size = (128, 128),
+                                            batch_size = 32,
+                                            class_mode = 'categorical')
+
+# finally start computation
+classifier.fit_generator(training_data,
+                         steps_per_epoch = (8000 / 32),
+                         epochs = 25,
+                         validation_data = test_data,
+                         validation_steps = 2000)
