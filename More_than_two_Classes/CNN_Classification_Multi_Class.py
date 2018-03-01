@@ -4,6 +4,8 @@ Created on Thu Mar  1 11:13:51 2018
 
 @author: pranavjain
 
+This program predicts the type of flower from an image.
+
 """
 
 # Importing the Keras libraries and packages
